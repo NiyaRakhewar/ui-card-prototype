@@ -100,7 +100,7 @@ export const Card = () => {
     <>
       <div className="container h-96 w-96 bg-white bg-opacity-10 relative z-2 rounded-2xl shadow-5xl border-opacity-30 backdrop-filter backdrop-blur-sm">
         <div className="h-full flex flex-col justify-evenly items-center">
-          <div className="text-white font-poppins text-2xl tracking-widest">
+          <div className="text-white font-poppins text-2xl tracking-widest font-bold">
             Calculate Earnings
           </div>
           <div className="flex flex-col justify-center self-start mx-7 w-80">
@@ -108,7 +108,7 @@ export const Card = () => {
               Gross Earnings (Rs)
             </label>
             <input
-              className="py-1.5 px-2 mt-1 bg-slate-500 rounded-md"
+              className="py-1.5 px-2 mt-1 bg-slate-500 rounded-md  "
               name="grossEarnings"
               placeholder=" Gross Earnings ₹"
               type="number"
@@ -173,7 +173,9 @@ export const Card = () => {
             </div>
           </div>
           {errorMessage && (
-            <p className="text-red-500 mx-8  mt-2 w-100">* {errorMessage}</p>
+            <p className="text-red-500 mx-8 mt-2 w-100 font-poppins">
+              * {errorMessage}
+            </p>
           )}
           <button
             className="cursor-pointer font-poppins rounded-full px-5 py-1.5 bg-white bg-opacity-50 hover:bg-white hover:bg-opacity-80 w-80 font-bold text-xl"
