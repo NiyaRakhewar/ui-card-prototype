@@ -22,15 +22,15 @@ export const Card = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    if (value < 0) {
-      return; // Check if the input value is less than 0. If so, return early and do nothing.
-    }
+
     console.log(name, value);
 
-    setInput((prevInput) => ({ ...prevInput, [name]: value }));
+    if (value >= 0) {
+      setInput((prevInput) => ({ ...prevInput, [name]: value }));
 
-    if (value && errorMessage) {
-      setErrorMessage("");
+      if (value && errorMessage) {
+        setErrorMessage("");
+      }
     }
   };
 
