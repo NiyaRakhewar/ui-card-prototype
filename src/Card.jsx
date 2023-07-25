@@ -50,7 +50,7 @@ export const Card = () => {
       miscFeesPercentage === "" ||
       referralPercentage === ""
     ) {
-      setErrorMessage("Please fill in all input fields.");
+      setErrorMessage("Please fill in all input fields ( numbers only ).");
       setShowOutput(false);
       return;
     }
