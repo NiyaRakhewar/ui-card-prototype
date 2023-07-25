@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-// import Tilt from "react-parallax-tilt";
+import Tilt from "react-parallax-tilt";
 
 export const Card = () => {
   const [input, setInput] = useState({
@@ -198,44 +198,46 @@ export const Card = () => {
           <div className="text-white font-poppins text-xl mt-1 mb-2 tracking-widest font-bold">
             Output
           </div>
-          <div className="bg-slate-500 shadow-5xl ">
-            <table>
-              <tbody>
-                <tr className="border border-slate-950 ">
-                  <td className="text-white  tracking-widest text-l w-100 border border-slate-950 px-8">
-                    Dalal Earnings
-                  </td>
-                  <td className="text-white w-100 border border-slate-950 px-10">
-                    {output.dalalEarnings} ₹
-                  </td>
-                </tr>
-                <tr className="border border-slate-950">
-                  <td className="text-white  tracking-widest text-l w-100 border border-slate-950 px-8">
-                    Trader Earnings
-                  </td>
-                  <td className="text-white w-100 border border-slate-950 px-10">
-                    {output.traderEarnings} ₹
-                  </td>
-                </tr>
-                <tr className="border border-slate-950">
-                  <td className="text-white  tracking-widest text-l w-100 border border-slate-950 px-8">
-                    Misc. Fees
-                  </td>
-                  <td className="text-white w-100 border border-slate-950 px-10">
-                    {output.miscFees} ₹
-                  </td>
-                </tr>
-                <tr className="border border-slate-950">
-                  <td className="text-white  tracking-widest text-l w-100 border border-slate-950 px-8">
-                    Referral Earnings
-                  </td>
-                  <td className="text-white w-100 border border-slate-950 px-10 mb-4">
-                    {output.referralEarnings} ₹
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <Tilt>
+            <div className="bg-slate-500 shadow-5xl ">
+              <table>
+                <tbody>
+                  <tr className="border border-slate-950 ">
+                    <td className="text-white  tracking-widest text-l w-100 border border-slate-950 px-8">
+                      Dalal Earnings
+                    </td>
+                    <td className="text-white w-100 border border-slate-950 px-10">
+                      {output.dalalEarnings} ₹
+                    </td>
+                  </tr>
+                  <tr className="border border-slate-950">
+                    <td className="text-white  tracking-widest text-l w-100 border border-slate-950 px-8">
+                      Trader Earnings
+                    </td>
+                    <td className="text-white w-100 border border-slate-950 px-10">
+                      {output.traderEarnings} ₹
+                    </td>
+                  </tr>
+                  <tr className="border border-slate-950">
+                    <td className="text-white  tracking-widest text-l w-100 border border-slate-950 px-8">
+                      Misc. Fees
+                    </td>
+                    <td className="text-white w-100 border border-slate-950 px-10">
+                      {output.miscFees} ₹
+                    </td>
+                  </tr>
+                  <tr className="border border-slate-950">
+                    <td className="text-white  tracking-widest text-l w-100 border border-slate-950 px-8">
+                      Referral Earnings
+                    </td>
+                    <td className="text-white w-100 border border-slate-950 px-10 mb-4">
+                      {output.referralEarnings} ₹
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Tilt>
         </div>
       )}
     </>
