@@ -19,9 +19,14 @@ export const Card = () => {
   });
 
   const [showOutput, setShowOutput] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    if (value < 0) {
+      return; // Check if the input value is less than 0. If so, return early and do nothing.
+    }
     console.log(name, value);
+
     setInput((prevInput) => ({ ...prevInput, [name]: value }));
 
     if (value && errorMessage) {
@@ -50,17 +55,17 @@ export const Card = () => {
       return;
     }
 
-    if (
-      grossEarnings < 0 ||
-      dalalPercentage < 0 ||
-      traderPercentage < 0 ||
-      miscFeesPercentage < 0 ||
-      referralPercentage < 0
-    ) {
-      setErrorMessage("Please enter positive values for all input fields.");
-      setShowOutput(false);
-      return;
-    }
+    // if (
+    //   grossEarnings < 0 ||
+    //   dalalPercentage < 0 ||
+    //   traderPercentage < 0 ||
+    //   miscFeesPercentage < 0 ||
+    //   referralPercentage < 0
+    // ) {
+    //   setErrorMessage(`Please enter positive values for input fields.`);
+    //   setShowOutput(false);
+    //   return;
+    // }
 
     if (
       dalalPercentage !== "" &&
