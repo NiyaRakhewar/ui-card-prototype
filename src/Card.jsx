@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Tilt from "react-parallax-tilt";
+// import Tilt from "react-parallax-tilt";
 
 export const Card = () => {
   const [input, setInput] = useState({
