@@ -23,8 +23,6 @@ export const Card = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    console.log(name, value);
-
     if (value >= 0) {
       setInput((prevInput) => ({ ...prevInput, [name]: value }));
 
@@ -67,11 +65,7 @@ export const Card = () => {
     //   return;
     // }
 
-    if (
-      dalalPercentage !== "" &&
-      traderPercentage !== "" &&
-      Number(dalalPercentage) + Number(traderPercentage) !== 100
-    ) {
+    if (Number(dalalPercentage) + Number(traderPercentage) !== 100) {
       setErrorMessage(
         "The sum of Dalal Earnings % and Trader Earnings % must be 100%"
       );
